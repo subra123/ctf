@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>poem</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/files/2e18b8fa719699d56ae2325cf33cebbc/WhatsApp_Image_2026-03-28_at_7.06.52_PM.jpeg" type="image/x-icon">
+
+  
+
+  
+    <link rel="stylesheet" href="/themes/r2-terminal/static/assets/main.e9ec7884.css">
+  
+
+  
+
+  <script  src="/themes/r2-terminal/static/assets/color_mode_switcher.52334129.js"></script>
+
+  <script type="text/javascript">
+      window.init = {
+          'urlRoot': "",
+          'csrfNonce': "869edccc95b0817f7f4fb8bc954c0e6dc16c106812f79324ae241048a072f18e",
+          'userMode': "teams",
+          'userId': 0,
+          'userName': null,
+          'userEmail': null,
+          'userVerified': null,
+          'teamId': null,
+          'teamName': null,
+          'start': 1775068200,
+          'end': 1775241000,
+          'themeSettings': null,
+          'eventSounds': [
+            "/themes/core/static/sounds/notification.webm",
+            "/themes/core/static/sounds/notification.mp3",
+          ],
+      }
+  </script>
+
+  <style>
+
+/* ========== ROOT PALETTE (INSPIRED BY IMAGE) ========== */
+:root {
+    --bg-main: #1a120b;          /* deep earthy brown */
+    --bg-soft: #2c1d14;
+
+    --saffron: #d97706;          /* muted orange */
+    --saffron-soft: #f59e0b;
+
+    --gold: #e6c07b;             /* temple gold */
+    --gold-dim: #c6a15b;
+
+    --text-main: #f5e6c8;
+    --text-dim: #d6c3a3;
+}
+
+/* ========== GLOBAL ========== */
+body {
+    background: linear-gradient(180deg, #1a120b, #0f0a06);
+    color: var(--text-main);
+    font-family: 'Cinzel', serif;
+    transition: background 0.5s ease;
+}
+
+/* subtle breathing background glow */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 20%, rgba(217,119,6,0.15), transparent 60%);
+    animation: breathe 8s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes breathe {
+    0%,100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+    background: rgba(26,18,11,0.9) !important;
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--gold-dim);
+    transition: all 0.3s ease;
+}
+
+/* subtle hover glow */
+.navbar:hover {
+    box-shadow: 0 0 15px rgba(230,192,123,0.2);
+}
+
+.navbar a {
+    color: var(--text-main) !important;
+}
+
+.navbar a:hover {
+    color: var(--gold);
+}
+
+/* ========== HEADER ========== */
+.jumbotron {
+    background: linear-gradient(
+        to bottom,
+        rgba(217,119,6,0.15),
+        rgba(26,18,11,0.9)
+    ) !important;
+
+    border-bottom: 1px solid var(--gold-dim);
+    text-align: center;
+
+    animation: fadeIn 1.2s ease;
+}
+
+/* smooth fade */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== CARDS ========== */
+.card {
+    background: var(--bg-soft);
+    border: 1px solid rgba(230,192,123,0.2);
+    color: var(--text-main);
+
+    transition: all 0.3s ease;
+}
+
+/* soft hover lift */
+.card:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* ========== BUTTONS ========== */
+.btn-primary {
+    background: linear-gradient(135deg, var(--saffron), var(--saffron-soft));
+    border: none;
+    color: #1a120b;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(217,119,6,0.4);
+}
+
+/* ========== LINKS ========== */
+a {
+    color: var(--gold);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--saffron-soft);
+}
+
+/* ========== TABLES ========== */
+.table {
+    color: var(--text-main);
+}
+
+.table thead {
+    background: rgba(217,119,6,0.15);
+}
+
+.table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: rgba(230,192,123,0.08);
+}
+
+/* ========== INPUTS ========== */
+.form-control {
+    background: #120c07;
+    border: 1px solid rgba(230,192,123,0.2);
+    color: var(--text-main);
+}
+
+.form-control:focus {
+    border-color: var(--saffron);
+    box-shadow: 0 0 6px rgba(217,119,6,0.3);
+}
+
+/* ========== MODALS ========== */
+.modal-content {
+    background: var(--bg-soft);
+    border: 1px solid var(--gold-dim);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: #120c07;
+    border-top: 1px solid rgba(230,192,123,0.2);
+    color: var(--text-dim);
+}
+
+/* ========== HEADINGS (TEMPLE STYLE GLOW) ========== */
+h1, h2, h3 {
+    color: var(--gold);
+    text-shadow: 0 0 6px rgba(230,192,123,0.3);
+}
+
+/* ========== CODE BLOCKS ========== */
+code, pre {
+    background: #0f0a06;
+    color: var(--saffron-soft);
+    border: 1px solid rgba(217,119,6,0.2);
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--saffron), var(--gold));
+}
+
+/* ========== VERY SUBTLE FLOAT ANIMATION ========== */
+.jumbotron h1 {
+    animation: floatText 6s ease-in-out infinite;
+}
+
+@keyframes floatText {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+</style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a href="/" class="navbar-brand">
+      
+        <img
+            class="img-responsive ctf_logo"
+            src="/files/7d7b0d42462b809228bd359d72146900/WhatsApp_Image_2026-03-28_at_7.06.52_PM.jpeg"
+            alt="KashiCTF&#39; 26"
+            height="25"
+        >
+      
+    </a>
+
+    <button
+        class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#base-navbars"
+        aria-controls="base-navbars" aria-expanded="false" aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="base-navbars">
+      <ul class="navbar-nav me-auto">
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/rules" >
+              Rules
+            </a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/flag" >
+              flags
+            </a>
+          </li>
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/poem" >
+              poem
+            </a>
+          </li>
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/users">
+              Users
+            </a>
+          </li>
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/teams">
+                Teams
+              </a>
+            </li>
+          
+        
+
+        
+          <li class="nav-item">
+            <a class="nav-link" href="/scoreboard">
+              Scoreboard
+            </a>
+          </li>
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/challenges">
+            Challenges
+          </a>
+        </li>
+      </ul>
+
+      <hr class="d-sm-flex d-md-flex d-lg-none">
+
+      <ul class="navbar-nav ms-md-auto d-block d-sm-flex d-md-flex">
+        
+
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/register">
+                <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Register">
+                  <i class="fas fa-user-plus d-none d-md-inline d-lg-none"></i>
+                </span>
+                <span class="d-sm-inline d-md-none d-lg-inline">
+                  <i class="fas fa-user-plus pe-1"></i>
+                  Register
+                </span>
+              </a>
+            </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="/login">
+              <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Login">
+                <i class="fas fa-sign-in-alt d-none d-md-inline d-lg-none"></i>
+              </span>
+              <span class="d-sm-inline d-md-none d-lg-inline">
+                <i class="fas fa-sign-in-alt pe-1"></i>
+                Login
+              </span>
+            </a>
+          </li>
+        
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-language d-none d-md-inline"></i>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-language pe-1"></i>
+              Change language
+            </span>
+          </button>
+          <form x-data="LanguageForm">
+            <ul class="dropdown-menu dropdown-menu-end">
+              
+              <li>
+                  <span class="dropdown-item bg-primary text-white" @click="set" value="en">
+                    English
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="de">
+                    Deutsch
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pl">
+                    Polski
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="es">
+                    Español
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ar">
+                    اَلْعَرَبِيَّةُ
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_CN">
+                    简体中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="zh_TW">
+                    繁體中文
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fr">
+                    Français
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ko">
+                    한국어
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ru">
+                    русский язык
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="pt_BR">
+                    Português do Brasil
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sk">
+                    Slovenský jazyk
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ja">
+                    日本語
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="it">
+                    Italiano
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="vi">
+                    tiếng Việt
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ca">
+                    Català
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="el">
+                    Ελληνικά
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="fi">
+                    Suomi
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="ro">
+                    Română
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sl">
+                    Slovenščina
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="sv">
+                    Svenska
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="he">
+                    עברית
+                  </span>
+              </li>
+              <li>
+                  <span class="dropdown-item " @click="set" value="uz">
+                    oʻzbekcha
+                  </span>
+              </li>
+            </ul>
+          </form>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link theme-switch" type="button">
+            <span data-bs-toggle="tooltip" data-bs-placement="bottom" title="Toggle theme">
+              <i class="fas fa-sun d-none d-md-inline"></i>
+            </span>
+            <span class="d-sm-inline d-md-none">
+              <i class="fas fa-sun pe-1"></i>
+              Toggle theme
+            </span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main role="main">
+  
+  <div class="container">
+    <h1>Poem</h1>
+<pre><code class="language-txt">The way a crow	      	  	   	   		     	   	      
+Shook down on me      	  		   	 	     		      
+The dust of snow  	     		 	      	    	       	      
+From a hemlock tree    	 	  	     	       	     	     	 
+      	  	  	   	     	     	 	     	  	       
+Has given my heart   	       		    	     	       	      	    
+A change of mood  	   	   	     	   	      	  	       
+And saved some part   	   	    	    	   	     	      	     
+Of a day I had rued.	     	       	 	   	    	  	       
+   	   	   	    	     	    	      	  	   	      
+    	     	      	       	      	     	  	     	       	     
+     	     	      	      	   	       	    	    	 	     
+    	       		      	    	     	       	     
+</code></pre>
+<p><code>By Robert Frost</code></p>
+
+  </div>
+
+</main>
+
+
+<div 
+    id="ctfdio-snackbar-email-nudge"
+    x-data 
+    x-show="window.init.userId && !window.init.userVerified && localStorage.getItem('remind_email_verify') != window.init.userId && (!['/team', '/teams/join', '/teams/new'].includes(window.location.pathname) || window.init.teamId != null)"
+    class="alert alert-info alert-dismissible col-md-4 col-10 position-fixed text-center m-0 ctfdio-email-nudge" 
+    style="bottom: 45px; left: 50%; transform: translateX(-50%); z-index: 1040; display: none;" 
+    role="alert"
+>
+  <small>
+    <strong>Email Unconfirmed</strong><br>
+    <span>To confirm your email address please <a href="/confirm?flow=init">click here</a>.</span>
+  </small>
+  <button type="button" class="btn-close" @click="localStorage.setItem('remind_email_verify', window.init.userId); $el.parentElement.style.display = 'none';" aria-label="Close"></button>
+</div>
+
+
+<footer class="footer">
+  <div class="container text-center">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="text-secondary">
+      <small class="text-muted">
+        KashiCTF
+      </small>
+    </a>
+  </div>
+</footer>
+
+<div x-data>
+  <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div x-ref="toast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+      <div class="toast-header">
+        <strong class="me-auto" x-text="$store.toast.title"></strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body" x-html="$store.toast.html">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div x-data>
+  <div class="modal fade" x-ref="modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" x-text="$store.modal.title"></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p x-html="$store.modal.html"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Got it!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script type="module"  src="/themes/r2-terminal/static/assets/index.9b9a8697.js"></script><script type="module"  src="/themes/r2-terminal/static/assets/page.94550e0c.js"></script>
+
+
+
+
+
+</body>
+</html>

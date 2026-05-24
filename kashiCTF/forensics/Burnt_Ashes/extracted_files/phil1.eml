@@ -1,0 +1,10 @@
+From: ved@ritual-ward.local
+To: self@ritual-ward.local
+Subject: passphrase doctrine draft
+Date: Mon, 11 Mar 2026 08:12:00 +0530
+
+Reminder for all personal lock phrases:
+1) Always compose exactly four words.
+2) First two words are location labels.
+3) Last two words must be animals or objects from ritual_words list.
+4) Join with hyphen; no numerals.

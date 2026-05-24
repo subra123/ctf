@@ -1,0 +1,7 @@
+Hidden Ledger Capsule
+====================
+
+Reconstructed transfer note, sealed for tribunal audit.
+Flag: kashiCTF{ledger_ashes_remember_every_ritual}
+
+Custodian phrase seed: ghat manjari

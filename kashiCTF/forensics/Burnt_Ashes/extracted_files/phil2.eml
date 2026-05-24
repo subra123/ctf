@@ -1,0 +1,7 @@
+From: ved@ritual-ward.local
+To: self@ritual-ward.local
+Subject: keep this private
+Date: Mon, 11 Mar 2026 08:19:00 +0530
+
+Do not store the second-stage AES tuple near the payload.
+Move it where only block-level examiners will look.

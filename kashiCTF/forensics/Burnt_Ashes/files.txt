@@ -1,0 +1,44 @@
+d/d 32770:	home
++ d/d 32771:	pandit_ved
+++ d/d 32772:	.archive_payloads
++++ r/r 18:	decoy_ledger_a.enc
++++ r/r 19:	decoy_ledger_a.txt
++++ r/r 20:	decoy_ledger_b.enc
++++ r/r 21:	decoy_ledger_b.txt
++++ r/r 22:	decoy_ledger_c.enc
++++ r/r 23:	decoy_ledger_c.txt
++++ r/r 24:	stage2_ledger.enc
++++ r/r 25:	stage2_ledger.txt
+++ d/d 32773:	Browser
++++ r/r 26:	history.tsv
+++ d/d 32774:	Documents
++++ r/r 27:	ritual_words.txt
+++ d/d 32775:	Maildir
++++ d/d 32779:	cur
+++++ r/r 28:	1700000000.M100001P1000Q1.mail:2,S
++++ d/d 32780:	new
+++++ r/r 29:	1700000001.M100002P1000Q2.mail
++++ d/d 32781:	tmp
+++ d/d 32776:	Notes
++++ r/r 31:	ritual_index_notes.md
++++ r/r 30:	restoration_log.txt
+++ d/d 32777:	Pictures
++++ d/d 32782:	ward_scans
+++++ r/r 32:	scan_ghat_registry.bmp
+++++ r/r 33:	scan_lacquer_margin.bmp
+++++ r/r 34:	scan_midnight_index.bmp
+++++ r/r 35:	scan_river_ledger.bmp
+++ d/d 32778:	chatlogs
++++ r/r 36:	ward-chat-2026-03-11.log
++++ r/r 37:	ward-chat-2026-03-14.log
+++ d/d 32783:	.cache
++++ r/r 38:	.glyph_index.bin
+d/d 11:	lost+found
+d/d 12:	deleted_mail_pool
++ r/r 14:	philosophy_01.eml
++ r/r 15:	philosophy_02.eml
+d/d 32769:	etc
++ r/r 16:	hostname
++ r/r 17:	issue
+r/r 13:	challenge_runtime.json
+V/V 65537:	$OrphanFiles

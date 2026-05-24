@@ -1,0 +1,7 @@
+[2026-03-11 22:06] ved: Keep this offline. First lock phrase is: trishul-lantern-braid
+[2026-03-11 22:08] tara: only for the decoy capsules?
+[2026-03-11 22:09] ved: yes, and decrypt with these if extracted:
+[2026-03-11 22:10] ved: AES-256-CBC salt=9a31f4b20d17c8ef
+[2026-03-11 22:10] ved: AES-256-CBC key=amber-ledger-lintel
+[2026-03-11 22:11] ved: AES-256-CBC iv=43a65f90d4bbcb17850a79c2e36d1f4a
+[2026-03-11 22:12] tara: understood, those are for false ledgers and ash manifests.
