@@ -2,7 +2,7 @@
 
 This repository contains my writeups and solutions for various Capture The Flag (CTF) competitions I have participated in.
 
-## Participated CTFs
+## Participated CTFs (2026)
 
 - **InCTF** (`inctf/`)
 - **KashiCTF** (`kashiCTF/`)
