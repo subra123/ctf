@@ -1,0 +1,12 @@
+# Ignore large forensic images and archives
+*.ad1
+*.zip
+*.img
+*.zlib
+*.bin
+*.elf
+
+# Ignore extracted software and artifacts
+autopsy-*/
+_*.extracted/
+carved_output/
